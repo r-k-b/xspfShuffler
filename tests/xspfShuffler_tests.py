@@ -1,5 +1,5 @@
 from nose.tools import *
-import NAME
+import xspfShuffler
 
 def setup():
     print "SETUP!"
