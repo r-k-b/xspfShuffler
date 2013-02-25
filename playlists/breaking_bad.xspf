@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist xmlns="http://xspf.org/ns/0/" xmlns:vlc="http://www.videolan.org/vlc/playlist/ns/0/" version="1">		
+	<title>Playlist</title>
+	<trackList>
+		<track>
+			<location>file:///C:/Users/VadShaytReth/Downloads/Breaking%20Bad%20Season%201-3/Breaking%20Bad%20Season%201/Breaking%20Bad%20-%20%5B1x01%5D%20-%20Pilot.mkv</location>
+			<duration>3486806</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>0</vlc:id>
+				<vlc:option>bookmarks={name=Breaking Bad - [1x01] - Pilot.mkv0,bytes=40127163,time=789}</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/VadShaytReth/Downloads/Breaking%20Bad%20Season%201-3/Breaking%20Bad%20Season%201/Breaking%20Bad%20-%20%5B1x02%5D%20-%20Cat&#39;s%20in%20the%20Bag....mkv</location>
+			<duration>2893312</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>1</vlc:id>
+				<vlc:option>bookmarks={name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv0,bytes=116061,time=6}</vlc:option>
+				<vlc:option>bookmarks={name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv0,bytes=116061,time=6},{name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv0,bytes=316897,time=10}</vlc:option>
+				<vlc:option>bookmarks={name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv0,bytes=116061,time=6},{name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv0,bytes=316897,time=10},{name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv2,bytes=61710827,time=989}</vlc:option>
+				<vlc:option>bookmarks={name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv0,bytes=116061,time=6},{name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv2,bytes=61710827,time=989}</vlc:option>
+				<vlc:option>bookmarks={name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv2,bytes=61710827,time=989}</vlc:option>
+				<vlc:option>bookmarks={name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv2,bytes=61710827,time=989},{name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv0,bytes=95469699,time=1604}</vlc:option>
+				<vlc:option>bookmarks={name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv2,bytes=61710827,time=989},{name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv0,bytes=95469699,time=1604},{name=Breaking Bad - [1x02] - Cat&#39;s in the Bag....mkv0,bytes=141458083,time=2533}</vlc:option>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/VadShaytReth/Downloads/Breaking%20Bad%20Season%201-3/Breaking%20Bad%20Season%201/Breaking%20Bad%20-%20%5B1x03%5D%20-%20...And%20the%20Bag&#39;s%20in%20the%20River.mkv</location>
+			<duration>2892800</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>2</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/VadShaytReth/Downloads/Breaking%20Bad%20Season%201-3/Breaking%20Bad%20Season%201/Breaking%20Bad%20-%20%5B1x04%5D%20-%20Cancer%20Man.mkv</location>
+			<duration>2892971</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>3</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/VadShaytReth/Downloads/Breaking%20Bad%20Season%201-3/Breaking%20Bad%20Season%201/Breaking%20Bad%20-%20%5B1x05%5D%20-%20Gray%20Matter.mkv</location>
+			<duration>2891648</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>4</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/VadShaytReth/Downloads/Breaking%20Bad%20Season%201-3/Breaking%20Bad%20Season%201/Breaking%20Bad%20-%20%5B1x06%5D%20-%20Crazy%20Handful%20of%20Nothin&#39;.mkv</location>
+			<duration>2885120</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>5</vlc:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Users/VadShaytReth/Downloads/Breaking%20Bad%20Season%201-3/Breaking%20Bad%20Season%201/Breaking%20Bad%20-%20%5B1x07%5D%20-%20A%20No-Rough-Stuff%20Type%20Deal.mkv</location>
+			<duration>2867156</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<vlc:id>6</vlc:id>
+				<vlc:option>bookmarks={name=Breaking Bad - [1x07] - A No-Rough-Stuff Type Deal.mkv0,bytes=118440618,time=2126}</vlc:option>
+			</extension>
+		</track>
+	</trackList>
+	<extension application="http://www.videolan.org/vlc/playlist/0">
+			<vlc:item tid="0"/>
+			<vlc:item tid="1"/>
+			<vlc:item tid="2"/>
+			<vlc:item tid="3"/>
+			<vlc:item tid="4"/>
+			<vlc:item tid="5"/>
+			<vlc:item tid="6"/>
+	</extension>
+</playlist>

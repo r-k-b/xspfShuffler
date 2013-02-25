@@ -1,0 +1,172 @@
+<ns0:playlist xmlns:ns0="http://xspf.org/ns/0/" xmlns:ns1="http://www.videolan.org/vlc/playlist/ns/0/" version="1">
+	<ns0:title>Playlist</ns0:title>
+	<ns0:trackList>
+		<ns0:track>
+			<ns0:location>file:///G:/Promotional/Kenworth%20TruckCast/Counterfeit_Parts.mp3</ns0:location>
+			<ns0:title>Kenworth_TruckCast_20090309_Counterfeit_Parts.mp3</ns0:title>
+			<ns0:duration>212351</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>0</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/Show%20Trucks%20-%20Vol%202.mkv</ns0:location>
+			<ns0:title>North American Show Trucks - Vol 2.mkv</ns0:title>
+			<ns0:duration>5070231</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>1</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///G:/Promotional/Kenworth%20TruckCast/KW_Summer_Maintenance_5_20_09.mp3</ns0:location>
+			<ns0:title>Kenworth_TruckCast_20090520_Summer_Maintenance.mp3</ns0:title>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>2</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/KENWORTH_COUNTRY_V5%20-%20Legends%20of%20the%20Outback%20-%20x264.mkv</ns0:location>
+			<ns0:title>Legends of the Outback - Vol 5 (Kenworth Country)</ns0:title>
+			<ns0:duration>6010520</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>3</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///G:/Promotional/Kenworth%20TruckCast/Kenworth%20Fuel%20Tanks.mp3</ns0:location>
+			<ns0:title>Kenworth_TruckCast_20070814_Fuel_Tanks</ns0:title>
+			<ns0:annotation>0</ns0:annotation>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>4</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/Show%20Trucks%20-%20Vol%201.mkv</ns0:location>
+			<ns0:title>North American Show Trucks - Vol 1.mkv</ns0:title>
+			<ns0:duration>4560222</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>5</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///G:/Promotional/Kenworth%20TruckCast/Mirrex_Bluetooth_Hands_Free_Safety.mp3</ns0:location>
+			<ns0:title>Kenworth_TruckCast_20090220_Mirrex_Bluetooth_Hands_Free_Safety.mp3</ns0:title>
+			<ns0:duration>200917</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>6</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/UltraShift%20PLUS%20Features%20Functions.wmv</ns0:location>
+			<ns0:duration>538099</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>7</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///G:/Promotional/Kenworth%20TruckCast/Kenworth%20Charge%20Air%20Coolers.mp3</ns0:location>
+			<ns0:title>Kenworth_TruckCast_20070815_Charge_Air_Coolers</ns0:title>
+			<ns0:annotation>0</ns0:annotation>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>8</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/Kenworth%20Electronic%20Brake%20Safety%20Systems.avi</ns0:location>
+			<ns0:duration>389000</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>9</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///G:/Promotional/Kenworth%20TruckCast/Kenworth%20Dynacraft.mp3</ns0:location>
+			<ns0:title>Kenworth_TruckCast_20071102_Dynacraft</ns0:title>
+			<ns0:annotation>0</ns0:annotation>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>10</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/Legends%20of%20the%20Outback%20-%20Vol%204%20-%20The%20Kinrara%20Run.mkv</ns0:location>
+			<ns0:duration>1382760</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>11</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///G:/Promotional/Kenworth%20TruckCast/KW%20Roadleveler%208.15.07.mp3</ns0:location>
+			<ns0:title>Kenworth_TruckCast_20070815_Roadleveler</ns0:title>
+			<ns0:annotation>0</ns0:annotation>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>12</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/Vocational%20Extreme%20Perfomance%20Video_VXP.wmv</ns0:location>
+			<ns0:duration>288809</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>13</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///G:/Promotional/Kenworth%20TruckCast/HVAC_Compilation%20v2%20%2B%20Normalized.mp3</ns0:location>
+			<ns0:title>Kenworth_TruckCast_20070802_HVAC_Compilation</ns0:title>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>14</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/Legends%20of%20the%20Outback%20-%20Vol%204%20-%20Outta%20the%20Gulf%20-%20x264.mkv</ns0:location>
+			<ns0:title>Legends of the Outback - Vol 4 - Outta the Gulf</ns0:title>
+			<ns0:annotation>Kenworth Roadtrains</ns0:annotation>
+			<ns0:duration>1279640</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>15</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///G:/Promotional/Kenworth%20TruckCast/Exhaust_2_Normalized.mp3</ns0:location>
+			<ns0:title>Kenworth_TruckCast_20070602_Exhaust.mp3</ns0:title>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>16</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/Legends%20of%20the%20Outback%20-%20Vol%204%20-%20Heading%20to%20the%20Isa%20-%20x264.mkv</ns0:location>
+			<ns0:title>Legends of the Outback - Vol 4 - Heading to the Isa</ns0:title>
+			<ns0:annotation>Kenworth Roadtrains</ns0:annotation>
+			<ns0:duration>1860440</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>17</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+		<ns0:track>
+			<ns0:location>file:///C:/Documents%20and%20Settings/ITC/My%20Documents/My%20Videos/Shrinking%20the%20Continent.mkv</ns0:location>
+			<ns0:duration>5447880</ns0:duration>
+			<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>18</ns1:id>
+			</ns0:extension>
+		</ns0:track>
+	</ns0:trackList>
+	<ns0:extension application="http://www.videolan.org/vlc/playlist/0">
+			<ns1:item tid="0" />
+			<ns1:item tid="1" />
+			<ns1:item tid="2" />
+			<ns1:item tid="3" />
+			<ns1:item tid="4" />
+			<ns1:item tid="5" />
+			<ns1:item tid="6" />
+			<ns1:item tid="7" />
+			<ns1:item tid="8" />
+			<ns1:item tid="9" />
+			<ns1:item tid="10" />
+			<ns1:item tid="11" />
+			<ns1:item tid="12" />
+			<ns1:item tid="13" />
+			<ns1:item tid="14" />
+			<ns1:item tid="15" />
+			<ns1:item tid="16" />
+			<ns1:item tid="17" />
+			<ns1:item tid="18" />
+	</ns0:extension>
+</ns0:playlist>
