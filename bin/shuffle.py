@@ -19,7 +19,7 @@ def main():
     try:
         listA = ET.parse(os.path.join(playlistFolder, 'ListA.xspf'))
         listB = ET.parse(os.path.join(playlistFolder, 'ListB.xspf'))
-        listC = ET.parse(os.path.join(playlistFolder, 'ListCD.xspf'))
+        listC = ET.parse(os.path.join(playlistFolder, 'ListC.xspf'))
     except (IOError, ET.ParseError) as err:
         print "Error: {0}: {1}".format(type(err), err)
         print ("Do you have valid VLC playlists named ListA.xspf, " 
