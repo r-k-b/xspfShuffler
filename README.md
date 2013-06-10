@@ -1,6 +1,6 @@
 # xspfShuffler
-Designed to take in 3 playlists, and output one playlist consisting of 
-the 3 input playlists joined in a certain order.
+Designed to read three folders of video files, and output one playlist consisting of 
+the 3 input folders joined in a certain order.
 
 Mostly for the purpose of creating a 'TV-like' experience from a 
 collection of long, medium, and short videos. (i.e., 'Programmes', 
