@@ -1,0 +1,87 @@
+<playlist xmlns="http://xspf.org/ns/0/" xmlns:ns1="http://www.videolan.org/vlc/playlist/ns/0/" version="1">
+	<title>Playlist</title>
+	<trackList>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-01.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>0</ns1:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-02.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>1</ns1:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-03.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>2</ns1:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-04.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>3</ns1:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-05.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>4</ns1:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-06.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>5</ns1:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-07.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>6</ns1:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-08.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>7</ns1:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-09.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>8</ns1:id>
+			</extension>
+		</track>
+		<track>
+			<location>file:///C:/Python27/projects/xspfShuffler/playlists/dummy/test_a-10.jpg</location>
+			<duration>1000</duration>
+			<extension application="http://www.videolan.org/vlc/playlist/0">
+				<ns1:id>9</ns1:id>
+			</extension>
+		</track>
+	</trackList>
+	<extension application="http://www.videolan.org/vlc/playlist/0">
+			<ns1:item tid="0" />
+			<ns1:item tid="1" />
+			<ns1:item tid="2" />
+			<ns1:item tid="3" />
+			<ns1:item tid="4" />
+			<ns1:item tid="5" />
+			<ns1:item tid="6" />
+			<ns1:item tid="7" />
+			<ns1:item tid="8" />
+			<ns1:item tid="9" />
+	</extension>
+</playlist>
