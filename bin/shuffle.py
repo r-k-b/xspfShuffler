@@ -13,9 +13,9 @@ ET.register_namespace('', 'http://xspf.org/ns/0/')
 
 ET.register_namespace('vlc', 'http://www.videolan.org/vlc/playlist/ns/0/')
 
-MEDIA_LONG = 'a'
-MEDIA_MED = 'b'
-MEDIA_SHORT = 'c'
+MEDIA_LONG = 'a' # Programmes
+MEDIA_MED = 'b' # Ad breaks
+MEDIA_SHORT = 'c' # interstitials
 
 def getSourceDirs():
     """
@@ -67,7 +67,7 @@ def joinLists(mediaLists, mediaPaths):
         loopcounter += 2
     return outputList
     
-def writeNewPlaylist(playlist):
+def writeNewPlaylist(playlist, outputFile = None):
     # with thanks to muratkarakus7
     xPlaylistRoot = ET.Element('playlist')
     xPlaylistRoot.set('version', '1')
@@ -84,7 +84,7 @@ def writeNewPlaylist(playlist):
         xPlaylistTrackLocation.text = 'file:///' + mediaItem
 
     xPlaylistTree = ET.ElementTree(xPlaylistRoot)
-    ET.dump(xPlaylistTree)
+    #ET.dump(xPlaylistTree)
    
 def main():
     mediaPaths = getSourceDirs()
