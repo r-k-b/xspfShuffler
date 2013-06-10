@@ -57,9 +57,14 @@ def joinLists(mediaLists, mediaPaths):
         outputList.append(os.path.join(mediaPaths[MEDIA_LONG], mediaFile_long))
         for i in range(0,2):
             outputList.append(os.path.join(mediaPaths[MEDIA_MED],
-                              mediaLists[MEDIA_MED][loopcounter + i]))
+                              mediaLists[MEDIA_MED][
+                                  (loopcounter + i) % len(mediaLists[MEDIA_MED])
+                              ]))
             outputList.append(os.path.join(mediaPaths[MEDIA_SHORT],
-                              mediaLists[MEDIA_SHORT][loopcounter + i]))
+                              mediaLists[MEDIA_SHORT][
+                                  (loopcounter + i) % len(mediaLists[MEDIA_SHORT])
+                              ]))
+        loopcounter += 2
     return outputList
     
 def writeNewPlaylist(playlist):
