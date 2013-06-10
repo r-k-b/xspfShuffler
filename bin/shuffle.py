@@ -12,6 +12,8 @@ ET.register_namespace('', 'http://xspf.org/ns/0/')
 # Found that here:
 # http://stackoverflow.com/questions/3895951/create-svg-xml-document-without-ns0-namespace-using-python-elementtree
 
+ET.register_namespace('vlc', 'http://www.videolan.org/vlc/playlist/ns/0/')
+
 def loadPlaylists():
     if not os.path.isdir(playlistFolder):
         print "Do you have a subdirectory named '{0}' ?".format(playlistFolder)
@@ -28,22 +30,23 @@ def loadPlaylists():
     
     return listA, listB, listC
 
-def jumblePlaylist(playlist):
-    playlist_root = playlist.getroot()
-    playlist_length = len(playlist_root[1])
-    playlist_offset = randint(0, playlist_length)
-    print playlist_length, playlist_offset
-    
-    playlist_jumbledroot = playlist_root
-    playlist_jumbledroot[1].clear()
+def slideChildren(element, tag = "track"):
+    "Takes an ElementTree element, renumbers the children of same by a random offset."
+
+    numChildren = len(element)
+    offset = randint(0, numChildren)
+        
+    newElement = element
+    for child in newElement.findall(tag): # 'track'
+        root.remove(child)
     
     for newtrack in range(playlist_length):
         oldtrack = (newtrack + playlist_offset) % playlist_length
         print oldtrack, newtrack
-        playlist_jumbledroot[1].append(playlist_root[1][oldtrack])
+        playlist_jumbledroot[1][oldtrack] = playlist_root[1][newtrack]
     
-    playlist._setroot(playlist_jumbledroot)
-    return playlist
+    
+    return newElement
 
 def joinPlaylists(listA, listB, listC):
     pass
@@ -61,10 +64,12 @@ if __name__ == "__main__":
     main()
 
 # testing - disable these
+print __name__
 a,b,c = loadPlaylists()
 ar = a.getroot()
 br = b.getroot()
 cr = c.getroot()
 a.findall('{http://xspf.org/ns/0/}extension/*')
-a.findall('{http://xspf.org/ns/0/}tracklist/*') # WHY IS TRACKLIST EMPTY???
+a.findall('{http://xspf.org/ns/0/}tracklist/*')
 d = jumblePlaylist(a)
+d.write('playlists\\d-test.xspf')
