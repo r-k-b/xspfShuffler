@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
 import xml.etree.ElementTree as ET
-import os
-from random import randint
+import os, random
 
 playlistFolder = 'playlists'
 
@@ -14,6 +13,10 @@ ET.register_namespace('', 'http://xspf.org/ns/0/')
 
 ET.register_namespace('vlc', 'http://www.videolan.org/vlc/playlist/ns/0/')
 
+MEDIA_LONG = 'a'
+MEDIA_MED = 'b'
+MEDIA_SHORT = 'c'
+
 def getSourceDirs():
     """
     This will accept commandline arguments or config file settings, and return
@@ -22,9 +25,9 @@ def getSourceDirs():
     """
     media = {}
     hardCodedSource = 'C:\\Python27\\projects\\xspfShuffler\\media\\'
-    media['a'] = os.path.join(hardCodedSource, 'a') # Programmes (long)
-    media['b'] = os.path.join(hardCodedSource, 'b') # Ad breaks (medium)
-    media['c'] = os.path.join(hardCodedSource, 'c') # interstitials (short)
+    media[MEDIA_LONG] = os.path.join(hardCodedSource, 'a') # Programmes (long)
+    media[MEDIA_MED] = os.path.join(hardCodedSource, 'b') # Ad breaks (medium)
+    media[MEDIA_SHORT] = os.path.join(hardCodedSource, 'c') # interstitials (short)
     return media
 
 def fillLists(mediaPaths):
@@ -34,12 +37,16 @@ def fillLists(mediaPaths):
         mediaLists[mediaType] = []
         for filename in os.listdir(mediaPaths[mediaType]):
             mediaLists[mediaType].append(filename)
-            
             # non-applicable filetypes to be pruned here
     return mediaLists
 
 def shuffleLists(mediaLists):
-    pass
+    for mediaType in mediaLists:
+        if mediaType == MEDIA_LONG: # alphanumeric order
+            mediaLists[mediaType].sort()
+        else: # random order
+            random.shuffle(mediaLists[mediaType])
+    return mediaLists
     
 def joinLists(listA = [], listB = [], listC = []):
     # Lists are already in proper order (sorted or shuffled).
@@ -55,7 +62,7 @@ def main():
     mediaLists = fillLists(mediaPaths)
     
     # jumble lists
-    #mediaLists = shuffleLists(mediaLists)
+    mediaLists = shuffleLists(mediaLists)
 
     print mediaLists
 
