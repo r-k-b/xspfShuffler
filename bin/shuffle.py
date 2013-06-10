@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import xml.etree.ElementTree as ET
-import os, random
+import os, random, urllib
 
 playlistFolder = 'playlists'
 
@@ -63,7 +63,23 @@ def joinLists(mediaLists, mediaPaths):
     return outputList
     
 def writeNewPlaylist(playlist):
-    pass
+    # with thanks to muratkarakus7
+    xPlaylistRoot = ET.Element('playlist')
+    xPlaylistRoot.set('version', '1')
+    xPlaylistRoot.set("xmlns", "http://xspf.org/ns/0/") # required?
+    xPlaylistRoot.set("xmlns:vlc", "http://www.videolan.org/vlc/playlist/ns/0/") # required?
+    xPlaylistTitle = ET.SubElement(xPlaylistRoot, "title")
+    xPlaylistTitle.text = "xspfShuffler Generated Playlist"
+    xPlaylistTrackList = ET.SubElement(xPlaylistRoot, "trackList")
+
+    for mediaItem in playlist:
+        #mediaItem = urllib.quote(str(mediaItem))
+        xPlaylistTrackFile = ET.SubElement(xPlaylistTrackList, "track")
+        xPlaylistTrackLocation = ET.SubElement(xPlaylistTrackFile, "location")
+        xPlaylistTrackLocation.text = 'file:///' + mediaItem
+
+    xPlaylistTree = ET.ElementTree(xPlaylistRoot)
+    ET.dump(xPlaylistTree)
    
 def main():
     mediaPaths = getSourceDirs()
@@ -79,8 +95,8 @@ def main():
     # merge lists in described order (refer SPEC.md)
     newList = joinLists(mediaLists, mediaPaths)
 
-    for thing in newList:
-        print thing
+    #for thing in newList:
+    #    print thing
 
     # write out new playlist to current folder
     writeNewPlaylist(newList)
