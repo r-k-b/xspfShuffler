@@ -48,9 +48,19 @@ def shuffleLists(mediaLists):
             random.shuffle(mediaLists[mediaType])
     return mediaLists
     
-def joinLists(listA = [], listB = [], listC = []):
+def joinLists(mediaLists, mediaPaths):
     # Lists are already in proper order (sorted or shuffled).
-    pass
+    # outputList contains full paths with the filenames.
+    outputList = []
+    loopcounter = 0
+    for mediaFile_long in mediaLists[MEDIA_LONG]:
+        outputList.append(os.path.join(mediaPaths[MEDIA_LONG], mediaFile_long))
+        for i in range(0,2):
+            outputList.append(os.path.join(mediaPaths[MEDIA_MED],
+                              mediaLists[MEDIA_MED][loopcounter + i]))
+            outputList.append(os.path.join(mediaPaths[MEDIA_SHORT],
+                              mediaLists[MEDIA_SHORT][loopcounter + i]))
+    return outputList
     
 def writeNewPlaylist(playlist):
     pass
@@ -64,10 +74,13 @@ def main():
     # jumble lists
     mediaLists = shuffleLists(mediaLists)
 
-    print mediaLists
+    #print mediaLists
 
     # merge lists in described order (refer SPEC.md)
-    newList = joinLists()
+    newList = joinLists(mediaLists, mediaPaths)
+
+    for thing in newList:
+        print thing
 
     # write out new playlist to current folder
     writeNewPlaylist(newList)
