@@ -27,7 +27,22 @@ def getSourceDirs():
     media['c'] = os.path.join(hardCodedSource, 'c') # interstitials (short)
     return media
 
-def joinLists(listA, listB, listC):
+def fillLists(mediaPaths):
+    # fill lists from contents of paths
+    mediaLists = {}
+    for mediaType in mediaPaths:
+        mediaLists[mediaType] = []
+        for filename in os.listdir(mediaPaths[mediaType]):
+            mediaLists[mediaType].append(filename)
+            
+            # non-applicable filetypes to be pruned here
+    return mediaLists
+
+def shuffleLists(mediaLists):
+    pass
+    
+def joinLists(listA = [], listB = [], listC = []):
+    # Lists are already in proper order (sorted or shuffled).
     pass
     
 def writeNewPlaylist(playlist):
@@ -37,14 +52,18 @@ def main():
     mediaPaths = getSourceDirs()
     
     # fill lists from contents of paths
-
+    mediaLists = fillLists(mediaPaths)
+    
     # jumble lists
+    #mediaLists = shuffleLists(mediaLists)
 
-    # merge lists in described order
-    joinLists()
+    print mediaLists
+
+    # merge lists in described order (refer SPEC.md)
+    newList = joinLists()
 
     # write out new playlist to current folder
-    writeNewPlaylist()
+    writeNewPlaylist(newList)
     
 
 if __name__ == "__main__":
