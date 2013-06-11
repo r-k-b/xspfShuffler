@@ -84,7 +84,11 @@ def writeNewPlaylist(playlist, outputFile = None):
         xPlaylistTrackLocation.text = 'file:///' + mediaItem
 
     xPlaylistTree = ET.ElementTree(xPlaylistRoot)
+
     #ET.dump(xPlaylistTree)
+    if outputFile == None:
+        outputFile = os.path.join('.', 'testOutput.xspf')
+    xPlaylistTree.write(outputFile)
    
 def main():
     mediaPaths = getSourceDirs()
