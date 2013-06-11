@@ -5,14 +5,6 @@ import os, random, urllib
 
 playlistFolder = 'playlists'
 
-# Prevent ElementTree.write() from adding 'ns0:' prefixes,
-# which VLC can't handle. 
-ET.register_namespace('', 'http://xspf.org/ns/0/')
-# Found that here:
-# http://stackoverflow.com/questions/3895951/create-svg-xml-document-without-ns0-namespace-using-python-elementtree
-
-ET.register_namespace('vlc', 'http://www.videolan.org/vlc/playlist/ns/0/')
-
 MEDIA_LONG = 'a' # Programmes
 MEDIA_MED = 'b' # Ad breaks
 MEDIA_SHORT = 'c' # interstitials
