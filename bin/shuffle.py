@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import xml.etree.ElementTree as ET
-import os, random, urllib
+import os, random, urllib, yaml
 
 playlistFolder = 'playlists'
 
@@ -9,18 +9,32 @@ MEDIA_LONG = 'a' # Programmes
 MEDIA_MED = 'b' # Ad breaks
 MEDIA_SHORT = 'c' # interstitials
 
-def getSourceDirs():
+def getConfiguration(configOption):
     """
-    This will accept commandline arguments or config file settings, and return
-    a dict of directories from which to source the media files.
+    This will accept commandline arguments or config file settings, and return:
+    - a dict of directories from which to source the media files.
+    - the destination directory for the generated playlist file.
     For now it is hard-coded.
     """
-    media = {}
-    hardCodedSource = 'C:\\Python27\\projects\\xspfShuffler\\media\\'
-    media[MEDIA_LONG] = os.path.join(hardCodedSource, 'a') # Programmes (long)
-    media[MEDIA_MED] = os.path.join(hardCodedSource, 'b') # Ad breaks (medium)
-    media[MEDIA_SHORT] = os.path.join(hardCodedSource, 'c') # interstitials (short)
-    return media
+    configFile = 'xspfShuffler.config' # should be in cwd?
+    try:
+        with open(configFile) as f:
+            config = yaml.safe_load(f)
+    except IOError as e:
+        raise IOError('Couldn\'t open the config file ({0}).'.format(configFile))
+    if configOption == 'mediaPaths':
+        media = {}
+        with open('xspfShuffler.config') as f:
+            config = yaml.safe_load(f)
+        media[MEDIA_LONG] = config['media_dir_long'] # Programmes (long)
+        media[MEDIA_MED] = config['media_dir_med'] # Ad breaks (medium)
+        media[MEDIA_SHORT] = config['media_dir_short'] # interstitials (short)
+        return media
+    
+    #if configOption == 'output
+    raise NameError(
+        """configOption passed to getConfiguration() was not recognised.
+        configOption value: {0}""".format(configOption))
 
 def fillLists(mediaPaths):
     # fill lists from contents of paths
@@ -83,7 +97,8 @@ def writeNewPlaylist(playlist, outputFile = None):
     xPlaylistTree.write(outputFile)
    
 def main():
-    mediaPaths = getSourceDirs()
+    mediaPaths = getConfiguration('mediaPaths')
+    #outputFolder = getConfiguration('outputFolder')
     
     # fill lists from contents of paths
     mediaLists = fillLists(mediaPaths)
@@ -91,13 +106,8 @@ def main():
     # jumble lists
     mediaLists = shuffleLists(mediaLists)
 
-    #print mediaLists
-
     # merge lists in described order (refer SPEC.md)
     newList = joinLists(mediaLists, mediaPaths)
-
-    #for thing in newList:
-    #    print thing
 
     # write out new playlist to current folder
     writeNewPlaylist(newList)
