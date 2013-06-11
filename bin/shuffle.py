@@ -12,26 +12,30 @@ MEDIA_SHORT = 'c' # interstitials
 def getConfiguration(configOption):
     """
     This will accept commandline arguments or config file settings, and return:
-    - a dict of directories from which to source the media files.
+    - a dict of directories from which to source the media files, or
     - the destination directory for the generated playlist file.
-    For now it is hard-coded.
+    Command-line argument parsing to be added.
     """
     configFile = 'xspfShuffler.config' # should be in cwd?
     try:
         with open(configFile) as f:
             config = yaml.safe_load(f)
     except IOError as e:
-        raise IOError('Couldn\'t open the config file ({0}).'.format(configFile))
+        raise IOError(
+            'Couldn\'t open the config file ({0}).'.format(configFile))
+    
     if configOption == 'mediaPaths':
         media = {}
-        with open('xspfShuffler.config') as f:
-            config = yaml.safe_load(f)
         media[MEDIA_LONG] = config['media_dir_long'] # Programmes (long)
         media[MEDIA_MED] = config['media_dir_med'] # Ad breaks (medium)
         media[MEDIA_SHORT] = config['media_dir_short'] # interstitials (short)
         return media
-    
-    #if configOption == 'output
+
+    if configOption == 'outputFolder':
+        outputFolder = config['output_xspf_dir']
+        return outputFolder
+
+    # shouldn't get to here
     raise NameError(
         """configOption passed to getConfiguration() was not recognised.
         configOption value: {0}""".format(configOption))
@@ -59,6 +63,7 @@ def joinLists(mediaLists, mediaPaths):
     # outputList contains full paths with the filenames.
     outputList = []
     loopcounter = 0
+    # Pattern: A B C B C A B C B C A B C B C...
     for mediaFile_long in mediaLists[MEDIA_LONG]:
         outputList.append(os.path.join(mediaPaths[MEDIA_LONG], mediaFile_long))
         for i in range(0,2):
@@ -98,7 +103,7 @@ def writeNewPlaylist(playlist, outputFile = None):
    
 def main():
     mediaPaths = getConfiguration('mediaPaths')
-    #outputFolder = getConfiguration('outputFolder')
+    outputFolder = getConfiguration('outputFolder')
     
     # fill lists from contents of paths
     mediaLists = fillLists(mediaPaths)
